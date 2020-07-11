@@ -4,3 +4,6 @@
 [submodule "fnalibs"]
 	path = fnalibs
 	url = https://github.com/butter-cat-games/fnalibs.git
+[submodule "Nez"]
+	path = Nez
+	url = https://github.com/prime31/Nez.git

@@ -1,9 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryGame", "FactoryGame\FactoryGame.csproj", "{70B92F02-21C5-4FF3-8887-BB84C21BC81E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FNA", "FNA\FNA.csproj", "{35253CE1-C864-4CD3-8249-4D1319748E8F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nez.FNA", "Nez\Nez.Portable\Nez.FNA.csproj", "{29E948A5-6181-49D3-ABE1-11381C5BB86A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,8 +33,19 @@ Global
 		{35253CE1-C864-4CD3-8249-4D1319748E8F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{35253CE1-C864-4CD3-8249-4D1319748E8F}.Release|x86.ActiveCfg = Release|Any CPU
 		{35253CE1-C864-4CD3-8249-4D1319748E8F}.Release|x86.Build.0 = Release|Any CPU
+		{29E948A5-6181-49D3-ABE1-11381C5BB86A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29E948A5-6181-49D3-ABE1-11381C5BB86A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29E948A5-6181-49D3-ABE1-11381C5BB86A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{29E948A5-6181-49D3-ABE1-11381C5BB86A}.Debug|x86.Build.0 = Debug|Any CPU
+		{29E948A5-6181-49D3-ABE1-11381C5BB86A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29E948A5-6181-49D3-ABE1-11381C5BB86A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29E948A5-6181-49D3-ABE1-11381C5BB86A}.Release|x86.ActiveCfg = Release|Any CPU
+		{29E948A5-6181-49D3-ABE1-11381C5BB86A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42CCB7B4-98F9-4938-94EF-E67678258295}
 	EndGlobalSection
 EndGlobal

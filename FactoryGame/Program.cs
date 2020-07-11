@@ -31,7 +31,7 @@ namespace FactoryGame
 			//           <string>True</string>
 			Environment.SetEnvironmentVariable("FNA_GRAPHICS_ENABLE_HIGHDPI", "1");
 
-			using(FactoryGameGame game = new FactoryGameGame())
+			using(FactoryGame game = new FactoryGame())
 			{
 				bool isHighDPI = Environment.GetEnvironmentVariable("FNA_GRAPHICS_ENABLE_HIGHDPI") == "1";
 				if(isHighDPI)
