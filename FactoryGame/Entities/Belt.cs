@@ -1,15 +1,24 @@
-﻿using Nez;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FactoryGame.Components;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Nez.Sprites;
+using Nez.Textures;
 
 namespace FactoryGame.Entities
 {
-    class Belt : Entity
+    class Belt : Nez.Entity
     {
         public Belt() : base("belt")
+        {
+            setupComponents();
+        }
+
+        public void setupComponents()
+        {
+            this.AddComponent(new Components.BeltComponent());
+        }
+
+        public void onAddedToMap()
         {
 
         }

@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace FactoryGame.Components
 {
-    class Belt : Component, IUpdatable
+    public class PlaceableComponent : Component
     {
-        public void Update()
+        public void OnAddToMap()
         {
-            throw new NotImplementedException();
+
         }
     }
+
 }

@@ -68,11 +68,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssetRebuild.cs" />
+    <Compile Include="Components\BeltComponent.cs" />
+    <Compile Include="Components\ItemEjectorComponent.cs" />
+    <Compile Include="Components\ItemAcceptorComponent.cs" />
+    <Compile Include="Components\MapComponent.cs" />
+    <Compile Include="Components\MinerComponent.cs" />
+    <Compile Include="Components\PlaceableComponent.cs" />
+    <Compile Include="Entities\Belt.cs" />
+    <Compile Include="Entities\Miner.cs" />
     <Compile Include="Input.cs" />
+    <Compile Include="Items\BaseItem.cs" />
+    <Compile Include="Items\Crystal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FactoryGame.cs" />
     <Compile Include="Scenes\BasicScene.cs" />
+    <Compile Include="Systems\BeltSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FNA\FNA.csproj">
@@ -92,6 +103,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Utils\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
