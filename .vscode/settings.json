@@ -8,18 +8,10 @@
   "csharp.referencesCodeLens.enabled": false,
 
   "files.exclude": {
-    "**/.[^v]*": true, // hide any files that start with a '.' but keep the .vscode folder
-    ".vs": true, // Visual Studio settings
     "imgui.ini": true,
     "MonoGameContent.targets": true,
     "**/obj": true,
-    "**/bin": true,
-    ".gitignore": true,
-    ".gitmodules": true,
-    "project_name/CompiledContent/.mgstats": true,
-    "**/*.csproj*": true,
-    "**/*.sln": true,
-    "FNA/[^src]*": true, // hide everything but the src folder
+    "FactoryGame/CompiledContent/.mgstats": true,
     "Nez/{[^DN]*}": true, // hide everything except what begins with D or N
     "Nez/Nez.*.*": true // hide the files in the root of the repo
   }

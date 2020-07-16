@@ -7,6 +7,6 @@ namespace FactoryGame.Items
 {
     public class Crystal : BaseItem
     {
-        public Crystal() : base("Crystal", 1, "Sprites/crystal") { }
+        public Crystal() : base("Crystal", 1, "Sprites/Crystal") { }
     }
 }
