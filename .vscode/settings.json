@@ -5,17 +5,20 @@
 
   // This just circumvents annoying default behavior with the C# extension...
   // If you really like Code Lens, feel free to change this.
-  "csharp.referencesCodeLens.enabled": false,
+  "csharp.referencesCodeLens.true": false,
+  "omnisharp.enableRoslynAnalyzers": true,
 
   "files.exclude": {
       "**/.[^v]*": true, // hide any files that start with a '.' but keep the .vscode folder
       ".vs": true, // Visual Studio settings
+      "getFNA.*": true,
       "imgui.ini": true,
       "MonoGameContent.targets": true,
       "**/obj": true,
       "**/bin": true,
       ".gitignore": true,
       ".gitmodules": true,
+      "README.md": true,
       "fnalibs": true,
       "FactoryGame/CompiledContent/.mgstats": true,
       "**/*.csproj*": true,
