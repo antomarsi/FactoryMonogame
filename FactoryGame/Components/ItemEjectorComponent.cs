@@ -1,45 +1,53 @@
 ﻿using FactoryGame.Items;
 using Microsoft.Xna.Framework;
 using Nez;
+using System;
 
 namespace FactoryGame.Components
 {
-    class ItemEjectorComponent : RenderableComponent
+    class ItemEjectorComponent : Component, IUpdatable
     {
+        ItemAcceptorComponent _itemAcceptor;
         BaseItem _item;
+        public Action ejectItemHandler;
 
-        public override RectangleF Bounds
+        public void setAcceptor(ItemAcceptorComponent itemAcceptor)
         {
-            get
+            _itemAcceptor = itemAcceptor;
+        }
+
+        public bool ejectItem(BaseItem item)
+        {
+            if (_item != null)
             {
-                if (_areBoundsDirty)
-                {
-                    if (_item != null)
-                        _bounds.CalculateBounds(Entity.Transform.Position, _localOffset, Vector2.Zero,
-                            Entity.Transform.Scale, Entity.Transform.Rotation, 15, 15);
-                    _areBoundsDirty = false;
-                }
-
-                return _bounds;
+                return false;
             }
-        }
-
-        public void AddItem(BaseItem item)
-        {
             _item = item;
+            return true;
         }
 
-        public bool canAcceptItem()
+        public bool canEjectItem()
         {
             return _item == null;
         }
 
-        public override void Render(Batcher batcher, Camera camera)
+        public void tryEjectItem()
         {
-            if (_item != null)
+            if (_item != null && _itemAcceptor != null)
             {
-                _item.Render(batcher, Entity.Transform.Position + LocalOffset);
+                if (_itemAcceptor.AddItem(_item)) { 
+                    _item = null;
+                    if (ejectItemHandler != null)
+                    {
+                        ejectItemHandler();
+                    }
+                }
             }
+        }
+
+        public void Update()
+        {
+            tryEjectItem();
         }
     }
 }

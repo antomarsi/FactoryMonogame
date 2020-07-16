@@ -15,7 +15,6 @@ namespace FactoryGame
 #else
             DebugRenderEnabled = false;
 #endif
-
             Window.AllowUserResizing = true;
 			Scene = new BasicScene();
         }

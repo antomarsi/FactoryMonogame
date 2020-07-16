@@ -12,8 +12,8 @@ namespace FactoryGame.Entities
 
         public void SetupComponents()
         {
-            AddComponent<ItemEjectorComponent>(new ItemEjectorComponent());
-            AddComponent<MinerComponent>(new MinerComponent());
+            AddComponent(new MinerComponent());
+            AddComponent(new ItemEjectorComponent());
         }
     }
 }

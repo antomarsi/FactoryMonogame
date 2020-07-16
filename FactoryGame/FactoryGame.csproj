@@ -72,18 +72,29 @@
     <Compile Include="Components\ItemEjectorComponent.cs" />
     <Compile Include="Components\ItemAcceptorComponent.cs" />
     <Compile Include="Components\MapComponent.cs" />
+    <Compile Include="Components\MapTesteComponent.cs" />
     <Compile Include="Components\MinerComponent.cs" />
     <Compile Include="Components\PlaceableComponent.cs" />
     <Compile Include="Entities\Belt.cs" />
     <Compile Include="Entities\Miner.cs" />
     <Compile Include="Input.cs" />
+    <Compile Include="IsometricMap\ExempleMap.cs" />
+    <Compile Include="IsometricMap\Layer.cs" />
+    <Compile Include="IsometricMap\Tile.cs" />
+    <Compile Include="IsometricMap\TileImage.cs" />
+    <Compile Include="IsometricMap\Tileset.cs" />
+    <Compile Include="IsometricMap\TilesetTile.cs" />
     <Compile Include="Items\BaseItem.cs" />
     <Compile Include="Items\Crystal.cs" />
+    <Compile Include="IsometricMap\Map.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FactoryGame.cs" />
     <Compile Include="Scenes\BasicScene.cs" />
-    <Compile Include="Systems\BeltSystem.cs" />
+    <Compile Include="Tiles\BaseTile.cs" />
+    <Compile Include="Tiles\Grass.cs" />
+    <Compile Include="Utils\Const.cs" />
+    <Compile Include="Utils\PathTween.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FNA\FNA.csproj">
@@ -104,9 +115,7 @@
   <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utils\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <MonoGamePlatform>Windows</MonoGamePlatform>

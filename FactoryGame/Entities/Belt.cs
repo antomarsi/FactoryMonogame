@@ -1,8 +1,4 @@
 ﻿using FactoryGame.Components;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Nez.Sprites;
-using Nez.Textures;
 
 namespace FactoryGame.Entities
 {
@@ -15,7 +11,9 @@ namespace FactoryGame.Entities
 
         public void setupComponents()
         {
-            this.AddComponent(new Components.BeltComponent());
+            this.AddComponent(new ItemAcceptorComponent());
+            this.AddComponent(new ItemEjectorComponent());
+            this.AddComponent(new BeltComponent());
         }
 
         public void onAddedToMap()

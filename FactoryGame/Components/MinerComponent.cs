@@ -1,14 +1,10 @@
 ﻿using FactoryGame.Items;
 using FactoryGame.Scenes;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nez;
 using Nez.Sprites;
 using Nez.Textures;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FactoryGame.Components
 {
@@ -17,7 +13,6 @@ namespace FactoryGame.Components
 
         float cooldown = 1f;
         float cooldownTimer;
-        ItemEjectorComponent itemEjector;
 
         public MinerComponent() : base()
         {
@@ -28,9 +23,12 @@ namespace FactoryGame.Components
         {
             base.OnAddedToEntity();
 
-            var texture = Entity.Scene.Content.Load<Texture2D>("Sprites/crystal");
+            var texture = Entity.Scene.Content.Load<Texture2D>("Sprites/Miner");
             SetSprite(new Sprite(texture));
-            itemEjector = Entity.AddComponent(new ItemEjectorComponent());
+        }
+        public void setAcceptor(ItemAcceptorComponent itemAcceptor)
+        {
+            Entity.GetComponent<ItemEjectorComponent>().setAcceptor(itemAcceptor);
         }
 
         public void Update()
@@ -45,10 +43,9 @@ namespace FactoryGame.Components
 
         public void spawnItem()
         {
-            if (itemEjector.canAcceptItem())
-            {
-                itemEjector.AddItem((Entity.Scene as BasicScene).items[0]);
-            }
+            var itemEjector = Entity.GetComponent<ItemEjectorComponent>();
+            Entity item = Entity.Scene.AddEntity((Entity.Scene as BasicScene).items[0].Clone(Entity.Position + new Vector2(16,0)));
+            itemEjector.ejectItem(item as BaseItem);
         }
     }
 }
